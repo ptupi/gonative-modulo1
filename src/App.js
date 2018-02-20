@@ -4,11 +4,30 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
-import './config/ReactotronConfig';
-import './config/DevToolsConfig';
+import 'config/ReactotronConfig';
+import 'config/DevToolsConfig';
+
+const styles = StyleSheet.create({
+	container: {
+	  flex: 1,
+	  justifyContent: 'center',
+	  alignItems: 'center',
+	  backgroundColor: '#F5FCFF',
+	},
+	welcome: {
+	  fontSize: 20,
+	  textAlign: 'center',
+	  margin: 10,
+	},
+	instructions: {
+	  textAlign: 'center',
+	  color: '#333333',
+	  marginBottom: 5,
+	},
+  });
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -34,22 +53,3 @@ export default class App extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
